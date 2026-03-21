@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayush Kumar — Portfolio</title>
+
+  <!-- Font (Google) and Font Awesome for icons (CDN) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+  <!-- If you don't have Font Awesome kit, replace icons with SVG or text links -->
+
+  <style>
+    :root{
+      --bg:#0f1724; --card-bg: rgba(255,255,255,0.05);
+      --accent: #8bd3ff;
+      --text: #e6eef6;
+      --muted: #b7c3cc;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,Arial; color:var(--text);
+      background: linear-gradient(90deg, #071428 20%, #0b2433 100%);
+      min-height:100vh; display:flex; align-items:center; justify-content:center;
+    }
+
+    .container{
+      width:95%; max-width:1100px; height:600px; background:var(--card-bg);
+      border-radius:12px; padding:36px; display:grid;
+      grid-template-columns: 1fr 520px 1fr; gap:24px; align-items:center;
+      box-shadow: 0 10px 40px rgba(2,6,23,0.6); position:relative;
+    }
+
+    /* Left column: name + socials + description */
+    .left{
+      padding-left:8px;
+    }
+    .name{
+      font-family: 'Playfair Display', serif; font-size:48px; line-height:0.9;
+      margin:0 0 16px 0;
+    }
+    .socials{
+      display:flex; gap:14px; align-items:center; margin-bottom:18px;
+    }
+    .socials a{
+      width:44px;height:44px;border-radius:10px; display:inline-flex;
+      align-items:center; justify-content:center; text-decoration:none;
+      color:var(--text); background: rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.04);
+      transition: transform .15s, background .15s;
+    }
+    .socials a:hover{ transform:translateY(-4px); background: rgba(255,255,255,0.06);}
+
+    .desc{
+      max-width:320px; color:var(--muted); font-size:15px; line-height:1.5;
+      margin-top:6px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      padding:12px; border-radius:8px;
+    }
+
+    /* Center column: phone mockup or hero image */
+    .center{
+      display:flex; align-items:center; justify-content:center;
+    }
+    .phone{
+      width:280px; height:520px; background:#0b0b0b; border-radius:26px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      border: 8px solid rgba(255,255,255,0.02); position:relative; overflow:hidden;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .phone img{ width:100%; height:100%; object-fit:cover; }
+
+    /* Right column: menu */
+    .right{
+      display:flex; flex-direction:column; gap:18px; align-items:flex-start;
+    }
+    .menu-item{
+      color:var(--text); opacity:0.9; text-decoration:none; font-size:16px;
+      padding:8px 10px; border-radius:8px; display:inline-block;
+      transition: background .12s, transform .12s;
+    }
+    .menu-item:hover{ background: rgba(255,255,255,0.03); transform:translateX(6px); }
+
+    /* small line separators */
+    .line{ height:1px; width:120px; background: rgba(255,255,255,0.03); margin:6px 0; }
+
+    /* Responsive */
+    @media (max-width:920px){
+      .container{ grid-template-columns:1fr; height:auto; padding:22px; gap:18px; }
+      .center{ order:1 }
+      .left{ order:2 }
+      .right{ order:3; flex-direction:row; gap:12px; flex-wrap:wrap; }
+      .phone{ width:220px; height:420px; margin:0 auto; }
+      .name{ font-size:36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" role="main">
+    <!-- LEFT: name + socials + description -->
+    <div class="left" aria-label="Profile info">
+      <h1 class="name">Ayush<br>Kumar</h1>
+
+      <div class="socials" aria-hidden="false">
+        <!-- Replace href with your profiles -->
+        <a href="https://instagram.com/" title="Instagram" target="_blank" rel="noopener">
+          <!-- simple svg icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+          </svg>
+        </a>
+
+        <a href="https://facebook.com/" title="Facebook" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 3h3v4h-3v14h-5V7H9V3h3V1.8C12 0.8 12.8 0 14 0h1z" fill="currentColor"/></svg>
+        </a>
+
+        <a href="https://twitter.com/" title="Twitter/X" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 5.9c-.6.3-1.1.5-1.8.6.7-.4 1.1-1 1.3-1.7-.7.4-1.4.7-2.2.8C18 5 17 4.6 16 4.6c-1.7 0-3 1.4-3 3 0 .2 0 .4.1.6-2.5-.1-4.7-1.4-6.1-3.3-.3.5-.5 1.1-.5 1.7 0 1.1.6 2.1 1.5 2.7-.6 0-1.2-.2-1.7-.5v.1c0 1.5 1 2.8 2.3 3.1-.4.1-.8.2-1.2.2-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.5 3.3-1.7 1.3-3.8 2.1-6.1 2.1H6c2.2 1.4 4.8 2.2 7.6 2.2 9.1 0 14.1-7.5 14.1-14.1v-.6c1-.7 1.9-1.6 2.6-2.6-.9.4-1.8.7-2.8.8z" fill="currentColor"/></svg>
+        </a>
+      </div>
+
+      <div class="desc">
+        <!-- English + Hindi short description -->
+        <strong>About me</strong>
+        <p style="margin:8px 0 0 0;">
+          I'm a student at <strong>IIT Madras</strong>, pursuing <strong>Data Science</strong>.
+          I also work part-time in <strong>web development</strong> and <strong>designing</strong>.
+        </p>
+        <p style="margin:8px 0 0 0; font-size:13px; color:var(--muted);">
+          मैं IIT Madras में पढ़ता हूँ। Data Science करता हूँ और पार्ट-टाइम web development व design भी करता हूँ।
+        </p>
+      </div>
+    </div>
+
+    <!-- CENTER: phone mockup (replace image src with your screenshot/hero) -->
+    <div class="center">
+      <div class="phone" role="img" aria-label="Project preview or hero">
+        <!-- Replace src with your screenshot or portfolio image -->
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project preview">
+      </div>
+    </div>
+
+    <!-- RIGHT: menu -->
+    <div class="right" aria-label="Site navigation">
+      <a class="menu-item" href="#collabs">Collabs</a>
+      <div class="line"></div>
+      <a class="menu-item" href="#portfolio">Portfolio</a>
+      <div class="line"></div>
+      <a class="menu-item" href="#blog">Blog</a>
+      <div class="line"></div>
+      <a class="menu-item" href="#reviews">Reviews</a>
+      <div class="line"></div>
+      <a class="menu-item" href="#contact">Contact Me</a>
+      <div class="line"></div>
+      <a class="menu-item" href="#merch">Merch</a>
+    </div>
+  </div>
+
+  <!-- Optional JS for simple interaction -->
+  <script>
+    // Example: smooth scroll for menu links
+    document.querySelectorAll('.menu-item').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        let el = document.getElementById(id);
+        if(!el){
+          // create placeholder section if not present
+          el = document.createElement('div');
+          el.id = id; el.style.padding = '100px 20px'; el.style.minHeight = '200px';
+          el.style.background = 'linear-gradient(180deg, rgba(255,255,255,0.01), transp
