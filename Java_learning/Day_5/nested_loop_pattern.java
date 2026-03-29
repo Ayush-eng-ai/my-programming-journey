@@ -94,3 +94,11 @@ class DRYRUNCharacterPattern {
     }
 }
 
+
+class InvertedCharacterPattern {
+    public static void main(String[] args) {
+       int rows = 5; // Number of rows for the pattern
+       char ch = 'A'; // Starting character
+    }
+}
+
