@@ -260,7 +260,7 @@ class pattern_9 {
     }
 
     public static void main(String args[]) {
-        int n = 5;
+        int n = 12;
         diamond_pattern(n);
     }
 }
