@@ -20,10 +20,6 @@ public class arrays_1 {
         // creation of an array
         int marks[] = new int[50];
 
-        int numbers[] = {1, 2, 3, 4, 5};
-
-        String name[] = {"Alice", "Bob", "Charlie"};
-
         // input in an array
         Scanner sc = new Scanner(System.in);
         // int phy
@@ -57,7 +53,7 @@ public class arrays_1 {
 
         // 
 
-        
+        sc.close();
     }
     
 }
@@ -316,26 +312,20 @@ class ReverseArray {
 */
  
 class PairsInArray {
-    public static void printpairs(int arr[]) {
+    public static void printpairs(int arr[], int target) {
         for(int i = 0; i < arr.length; i++) {
-            int curr = arr[i];
-
             for(int j = i + 1; j < arr.length; j++) {
-                System.out.println("Current pair: "+"(" + curr + ", " + arr[j] + ")");
-                // if(arr[i] + arr[j] == target) {
-                //     System.out.println("Pair found: (" + arr[i] + ", " + arr[j] + ")");
-                // }
+                if(arr[i] + arr[j] == target) {
+                    System.out.println("Pair found: (" + arr[i] + ", " + arr[j] + ")");
+                }
             }
-            System.out.println();
         }
     }
     public static void main(String args[]) {
         int arr[] = {1, 2, 3, 4, 5};
         int target = 5;
 
-        // printpairs(arr, target);
-
-        printpairs(arr);
+        printpairs(arr, target);
 
 
     }

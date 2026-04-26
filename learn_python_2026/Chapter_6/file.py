@@ -64,11 +64,14 @@
 #     print(data)
 
 
-f = open("D:\OFF Campuse Learning\Data Scienctist\Data_Analyst_Learning_phases\learn_python_2026\Chapter_6\demo.txt", "r")
-# f = open("D:\OFF Campuse Learning\Data Scienctist\Data_Analyst_Learning_phases\learn_python_2026\Chapter_6", "rt")
+# f = open("D:\OFF Campuse Learning\Data Scienctist\Data_Analyst_Learning_phases\learn_python_2026\Chapter_6\demo.txt", "r")
+# # f = open("D:\OFF Campuse Learning\Data Scienctist\Data_Analyst_Learning_phases\learn_python_2026\Chapter_6", "rt")
 
-data = f.read()
-print(data)
-print(type(data))
-f.close()
+# data = f.read()
+# print(data)
+# print(type(data))
+# f.close()
+
+name = input("Enter your name: ")
+print(f'Hi, {name}')
 

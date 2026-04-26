@@ -99,6 +99,13 @@ class InvertedCharacterPattern {
     public static void main(String[] args) {
        int rows = 5; // Number of rows for the pattern
        char ch = 'A'; // Starting character
+       for(int i = rows; i >= 1; i--) {
+           for(int j = 1; j <= i; j++) {
+               System.out.print(ch + " ");
+               ch++;
+           }
+           System.out.println();
+       }
     }
 }
 
