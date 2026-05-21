@@ -1,4 +1,4 @@
-package Days_8;
+package Day_8;
 
 /*
     // Operations  in arrays
