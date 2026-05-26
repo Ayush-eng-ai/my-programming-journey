@@ -380,4 +380,115 @@ class Chicken extends Animal {
         System.out.println("Walks on 2 legs...");
     }
 }
+
+
+// Interface: An interface in Java is a blueprint of a class that contains static constants and abstract methods. It is used to achieve abstraction and multiple inheritance in Java. A class can implement multiple interfaces, but it can only extend one class.
+
+@SuppressWarnings("unused")
+class OOPS5 {
+    public static void main(String args[]) {
+        Queen q = new Queen();
+        q.moves();
+
+        Rook r = new Rook();
+        r.moves();
+
+        King k = new King();
+        k.moves();
+
+    }
+}
+
+interface ChessPlayer {
+    void moves();
+}
+
+class Queen implements ChessPlayer {
+    @Override
+    public void moves() {
+        System.out.println("Moves in all 8 directions...");
+    }
+}
+
+class Rook implements ChessPlayer {
+    @Override
+    public void moves() {
+        System.out.println("Moves in 4 directions...");
+    }
+}
+
+class King implements ChessPlayer {
+    @Override
+    public void moves() {
+        System.out.println("Moves in 8 directions but only 1 step..."); 
+    }
+}
+
+// Static keyword: The static keyword in Java is used to indicate that a particular member belongs to the class rather than to instances of the class. It can be applied to variables, methods, blocks, and nested classes. Static members can be accessed without creating an instance of the class.
+class OOPS6 {
+    public static void main(String args[]) {
+        Student s1 = new Student();
+        s1.schoolName = "ABC School";
+        System.out.println("Student 1 School Name: " + s1.schoolName);  
+      
+
+        Student s2 = new Student();   
+        System.out.println("Student 2 School Name: " + s2.schoolName);
+
+        Student s3 = new Student();
+        System.out.println("Student 3 School Name: " + s3.schoolName);
+
+
+          
+    }
+
+}
+
+class Student {
+    String name;
+    int roll;
+
+    static String schoolName;
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+}
+
+
+// Super keyword: The super keyword in Java is used to refer to the immediate parent class object. It can be used to access parent class methods and constructors. It is commonly used in method overriding and constructor chaining.
+class OOPS7 {
+    public static void main(String args[]) {
+
+            Horse horse = new Horse();
+            horse.changeColor();
+            System.out.println("Horse Color: " + horse.color);
+    
+            Chicken chicken = new Chicken();
+            chicken.changeColor();
+            System.out.println("Chicken Color: " + chicken.color);
+        
+    }
+}
+
+class Animal {
+    Animal() {
+        System.out.println("Animal Constructor is called");   
+    }
+}
+
+class Horse extends Animal {
+    Horse() {
+        super(); // Calls the constructor of the parent class (Animal)
+        System.out.println("Horse Constructor is called");
+    }
+}
+
+
+
    
