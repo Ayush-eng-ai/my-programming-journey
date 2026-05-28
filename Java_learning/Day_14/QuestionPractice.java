@@ -57,3 +57,38 @@ class Student extends person {
     String SchoolName;
 
 }
+<<<<<<< HEAD:Java_learning/Day_14/QuestionPractice.java
+=======
+
+// Question 3: What will be output of this code?(both classes in  same package)
+
+public class inheritance {
+    public static void main(String args[]) {
+
+        Vehicle obj1 = new Car();
+        obj1.print();
+
+        Vehicle obj2 = new Vehicle();
+        obj2.print();
+
+
+        // Car c1 = new Car();
+        // c1.print();
+
+    }
+}
+
+class Vehicle {
+    void print(){
+        System.out.println("Base class Vehicle");
+    }
+}
+
+class Car extends Vehicle {
+    void print(){
+        System.out.println("Derived class Car");
+    }
+}
+
+
+>>>>>>> 781cb1e (Added Day 15 recursion basics and updated OOP practice):Day_14/QuestionPractice.java
