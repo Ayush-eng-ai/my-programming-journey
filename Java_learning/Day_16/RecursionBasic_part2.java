@@ -55,6 +55,29 @@ public class RecursionBasic_part2 {
 		return totWays;
 	}
 
+
+// Question 4: Binary Strings Problem
+            // Print all binary strings of size N without consecutive 1s.
+    public static void printBinStrings(int n, int LastPlace, StringBuilder str) {
+        // Base Case
+        if(n == 0) {
+            System.out.println(str);
+            return; 
+        }
+        // Recursive Case
+        // Place 0 at the current position
+        str.append('0');
+        printBinStrings(n - 1, 0, str);
+        str.deleteCharAt(str.length() - 1); // Backtrack    
+        // Place 1 at the current position (only if the last placed character is not 1)
+        if(LastPlace == 0) {
+            str.append('1');
+            printBinStrings(n - 1, 1, str);
+            str.deleteCharAt(str.length() - 1); // Backtrack
+        }
+
+    }
+
     public static void main(String args[]) {
     // Test the tiling problem
         int n = 4; // Length of the board
@@ -65,7 +88,12 @@ public class RecursionBasic_part2 {
         System.out.println("String after removing duplicates: " + removeDuplicates(inputString));   
 	
 	//Friends Pairing
-	System.out.println(friendsPairing(3));
-        
+	System.out.println("Ways to pair friends: " + friendsPairing(3));
+
+    // Test the binary strings problem
+        int size = 3; // Size of the binary strings
+        System.out.println("Binary strings of size " + size + " without consecutive 1s:");
+        printBinStrings(size, 0, new StringBuilder());
+ 
     }
 }
